@@ -1,8 +1,8 @@
-import { VimWasm } from './node_modules/vim-wasm/vimwasm.js';
+import { VimWasm } from './vimwasm.js';
 
 const screenCanvasElement = document.getElementById('vim-screen');
 const vim = new VimWasm({
-    workerScriptPath: './node_modules/vim-wasm/vim.js',
+    workerScriptPath: './vim.js',
     canvas: screenCanvasElement,
     input: document.getElementById('vim-input'),
 });

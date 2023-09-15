@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+    }
+
+    #vim-editor {
+      padding: 2px;
+      margin: 0px;
+      width: calc(100% - 4px);
+      height: calc(100% - 4px);
+      background-color: #282c33;
+    }
+
+    #vim-screen {
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+    }
+
+    #vim-cursor {
+      padding: 0px;
+      margin: 0px;
+      position: absolute;
+      display: none;
+    }
+
+    #vim-input {
+      width: 1px;
+      color: transparent;
+      background-color: transparent;
+      padding: 0px;
+      border: 0px;
+      outline: none;
+      vertical-align: middle;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    #vim-preedit {
+      visibility: hidden;
+      position: fixed;
+      display: none;
+    }
+  </style>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css" />
+  <title>vim.wasm example</title>
+</head>
+
+<body>
+  <div id="vim-editor">
+    <canvas id="vim-screen"></canvas>
+    <input id="vim-input" autocomplete="off" autofocus />
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>
